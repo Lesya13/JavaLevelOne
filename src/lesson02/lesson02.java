@@ -43,7 +43,7 @@ public class lesson02 {
     отричательное. Замечание: ноль считаем положительным числом.
      */
     public static void myNumbers() {
-        int a = -15;
+        int a = 15;
 
             if (a >= 0) {
                 System.out.println("It's positive number");
