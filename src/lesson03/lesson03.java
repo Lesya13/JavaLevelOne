@@ -182,7 +182,7 @@ public class lesson03 {
 //        int n = 1;
 //        for (int i = 0; i < myIntArray2.length; i++) {
 //            if(n == 1) {
-    
+
 //            }
 //        }
 //    }
