@@ -29,35 +29,33 @@ public class Lesson06 {
             }
         }
 
-        System.out.println();
-        System.out.println("*** Вызов методов более простой ***");
-
-        paladin.speak();
-        paladin.getDamage();
-        paladin.healSelf(15);
-
-        System.out.println("***");
-
-        titan.speak();
-        titan.healSelf(150);
-        titan.jump();
-
-        System.out.println("***");
-
-        archer.speak();
-        archer.getDamage();
-        archer.healSelf(30);
-        archer.jump();
-
-        System.out.println("***");
-
-        mage.speak();
-        mage.getDamage();
-        mage.healSelf(100);
-
-        System.out.println("***");
-
-
+//        System.out.println();
+//        System.out.println("*** Вызов методов более простой ***");
+//
+//        paladin.speak();
+//        paladin.getDamage();
+//        paladin.healSelf(15);
+//
+//        System.out.println("***");
+//
+//        titan.speak();
+//        titan.healSelf(150);
+//        titan.jump();
+//
+//        System.out.println("***");
+//
+//        archer.speak();
+//        archer.getDamage();
+//        archer.healSelf(30);
+//        archer.jump();
+//
+//        System.out.println("***");
+//
+//        mage.speak();
+//        mage.getDamage();
+//        mage.healSelf(100);
+//
+//        System.out.println("***");
 
     }
 }
