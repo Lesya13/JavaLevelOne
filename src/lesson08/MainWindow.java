@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame {
 
-    private int winWidth = 750;
+    private int winWidth = 700;
     private int winHeight = 600;
     private int winPosX = 200;
     private int getWinPosY = 150;
@@ -37,6 +37,9 @@ public class MainWindow extends JFrame {
     private JSlider sliderWinLengthSetup;
     private JLabel labelWinLength;
 
+    private GameMap gameMap;
+    private int round = 0;
+
 
     MainWindow() {
         prepareAppWindow();
@@ -45,11 +48,13 @@ public class MainWindow extends JFrame {
         prepareSettingsControls();
         prepareGameLog();
 
+        gameMap = new GameMap(this);
 
         panelSettings.add(panelControls, BorderLayout.NORTH);
         panelSettings.add(scrollPanel, BorderLayout.SOUTH);
 
         add(panelSettings, BorderLayout.EAST);
+        add(gameMap);
 
         setVisible(true);
     }
@@ -71,7 +76,7 @@ public class MainWindow extends JFrame {
         btnStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                collectGameSetup();
+                collectGameSetupAndLaunch();
             }
         });
 
@@ -136,15 +141,16 @@ public class MainWindow extends JFrame {
 
     }
 
-    private void putLog(String msg) {
+    void putLog(String msg) {
         gameLog.append(msg + "\n");
     }
 
-    private void collectGameSetup() {
+    private void collectGameSetupAndLaunch() {
         int mapSize = sliderMapSizeSetup.getValue();
         int winLen = sliderWinLengthSetup.getValue();
-
+        ++round;
+        putLog("--- Round " + round + " ---");
         putLog("Map size is: " + mapSize + "x" + mapSize + ". Win length is: " + winLen);
-
+        gameMap.startGame(mapSize, mapSize, winLen);
     }
 }
